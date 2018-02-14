@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="soccer">
+    <output-path>$PROJECT_DIR$/out/artifacts/soccer</output-path>
+    <root id="archive" name="soccer.war">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="soccerbackend/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="soccerbackend" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: postgresql:postgresql:9.0-801.jdbc4" />
+          <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.11.2" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.2.2" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

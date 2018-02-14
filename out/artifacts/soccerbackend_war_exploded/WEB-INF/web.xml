@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>com.soccerparser.MyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/MyServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetMatchesServlet</servlet-name>
+        <servlet-class>com.soccerparser.servlets.GetMatchesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetMatchesServlet</servlet-name>
+        <url-pattern>/getMatches</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetMatchesHistServlet</servlet-name>
+        <servlet-class>com.soccerparser.servlets.GetHistMatchesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetMatchesHistServlet</servlet-name>
+        <url-pattern>/getMatchesHistory</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetGroupsServlet</servlet-name>
+        <servlet-class>com.soccerparser.servlets.GetGroupsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetGroupsServlet</servlet-name>
+        <url-pattern>/getGroups</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>
+            com.soccerparser.GroupsParserListener
+        </listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>
+            com.soccerparser.MatchesParserListener
+        </listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>
+            com.soccerparser.MatchesHistoryParserListener
+        </listener-class>
+    </listener>
+
+</web-app>
